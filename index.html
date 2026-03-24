@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTH // SECURE - Password Strength</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="dash-header">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>SYS_AUTH_MODULE</span>
+            </div>
+            <div class="header-status">
+                <span class="pulse"></span>
+                <span class="status-text">NODE: SECURE_LINK_ACTIVE</span>
+            </div>
+        </header>
+
+        <main class="dash-grid">
+            <!-- Left panel: Input and Score -->
+            <section class="panel main-panel">
+                <div class="panel-header">
+                    <h2>// CREDENTIAL_ANALYSIS_TOOL</h2>
+                </div>
+                
+                <div class="input-section">
+                    <label for="password" class="mono-label">> INPUT_DATA_STREAM:</label>
+                    <div class="input-group">
+                        <input type="password" id="password" class="cyber-input" placeholder="Awaiting string input..." autocomplete="off">
+                        <button id="togglePassword" class="cyber-btn-icon" aria-label="Toggle visibility">
+                            <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="scan-visualizer">
+                    <div class="scan-line"></div>
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <span class="metric-title">ENTROPY_INDEX</span>
+                            <span class="metric-value font-mono" id="entropyValue">0.00</span>
+                        </div>
+                        <div class="metric-box" style="text-align: right;">
+                            <span class="metric-title">THREAT_LEVEL</span>
+                            <span class="metric-value font-mono threat-high" id="threatLevel">CRITICAL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="strength-gauge">
+                    <div class="gauge-labels">
+                        <span>INIT</span>
+                        <span>ANALYZING</span>
+                        <span>SECURE</span>
+                    </div>
+                    <div class="gauge-track">
+                        <div class="gauge-fill" id="strengthBar"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right panel: Requirements Terminal -->
+            <section class="panel side-panel">
+                <div class="panel-header">
+                    <h2>// SECURITY_POLICY_CHECK</h2>
+                </div>
+                <!-- Terminal Output -->
+                <div class="terminal-container">
+                    <ul class="terminal-log" id="suggestions">
+                        <!-- JS injected -->
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
